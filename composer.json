@@ -1,6 +1,7 @@
 {
     "name": "someniatko/amqp-url-parser",
     "description": "Parser of the AMQP (i.e. RabbitMQ) URLs",
+    "license": "MIT",
     "require": {
         "php": "^7.4",
         "league/uri-parser": "^1.4"
