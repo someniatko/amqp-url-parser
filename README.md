@@ -4,7 +4,7 @@ AMQP 0-9-1 URL parser.
 
 Tested against all examples from the [RabbitMQ URI specification](https://www.rabbitmq.com/uri-spec.html) (Appendix A)
 
-Based on [league/uri-parser](https://github.com/thephpleague/uri-parser).
+Based on [league/uri](https://github.com/thephpleague/uri).
 
 ## Usage
 
