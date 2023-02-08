@@ -3,7 +3,7 @@
     "description": "Parser of the AMQP (i.e. RabbitMQ) URLs",
     "license": "MIT",
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8",
         "league/uri-parser": "^1.4"
     },
     "require-dev": {
