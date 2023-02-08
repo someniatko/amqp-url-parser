@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Someniatko\AmqpUrlParser;
 
-use League\Uri;
+use League\Uri\UriString;
 
 final class Parser
 {
     /** @throws \UnexpectedValueException if the URI scheme is not amqp:// */
     public static function parse(string $url): AmqpUrl
     {
-        $parts = Uri\parse($url);
+        $parts = UriString::parse($url);
 
         if ($parts['scheme'] !== 'amqp') {
             throw new \UnexpectedValueException('Scheme must be "amqp"');
