@@ -20,9 +20,9 @@ final class Parser
         return new AmqpUrl(
             self::urlDecodeNullable($parts['user'] ?? null),
             self::urlDecodeNullable($parts['pass'] ?? null),
-            self::urlDecodeNullable($parts['host'] ?: null),
+            self::urlDecodeNullable($parts['host'] === '' ? null : $parts['host']),
             $parts['port'] ?? null,
-            ! empty($parts['path'])
+            ($parts['path'] !== '')
                 ? urldecode(substr($parts['path'], 1))
                 : null
         );

@@ -17,16 +17,6 @@
     </projectFiles>
 
     <issueHandlers>
-        <InternalMethod>
-            <errorLevel type="suppress">
-                <directory name="test" />
-            </errorLevel>
-        </InternalMethod>
-        <InternalClass>
-            <errorLevel type="suppress">
-                <directory name="test" />
-            </errorLevel>
-        </InternalClass>
         <PropertyNotSetInConstructor>
             <errorLevel type="suppress">
                 <directory name="test" />
