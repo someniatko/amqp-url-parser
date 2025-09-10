@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Test;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Someniatko\AmqpUrlParser\AmqpUrl;
 use Someniatko\AmqpUrlParser\Parser;
 
 final class ParserTest extends TestCase
 {
-    /** @dataProvider urlProvider */
+    #[DataProvider('urlProvider')]
     public function test(string $rawUrl, AmqpUrl $expectedParsedUrl): void
     {
         $parsedUrl = Parser::parse($rawUrl);
@@ -22,7 +23,7 @@ final class ParserTest extends TestCase
         $this->assertSame($expectedParsedUrl->vhost, $parsedUrl->vhost);
     }
 
-    public function urlProvider(): iterable
+    public static function urlProvider(): iterable
     {
         // https://www.rabbitmq.com/uri-spec.html
         // examples taken from Appendix A:
